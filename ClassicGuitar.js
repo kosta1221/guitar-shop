@@ -5,38 +5,36 @@ function ClassicGuitar(manufactureYear, brand, price) {
 	this.price = price;
 	this.numberOfStrings = 6;
 	this.used = false;
-
-	this.play = function () {
-		this.price *= 0.9;
-		return "🎶🎶🎶";
-	};
-
-	this.getManufactureYear = function () {
-		return this.getManufactureYear;
-	};
-
-	this.getBrand = function () {
-		return this.brand;
-	};
-
-	this.getPrice = function () {
-		return this.price;
-	};
-
-	this.setPrice = function (newPrice) {
-		this.price = newPrice;
-	};
 }
+
+ClassicGuitar.prototype.play = function () {
+	if (!this.used) {
+		this.price *= 0.9;
+	}
+	this.used = true;
+	return "🎶🎶🎶";
+};
+
+ClassicGuitar.prototype.getManufactureYear = function () {
+	return this.getManufactureYear;
+};
+
+ClassicGuitar.prototype.getBrand = function () {
+	return this.brand;
+};
+
+ClassicGuitar.prototype.getPrice = function () {
+	return this.price;
+};
+
+ClassicGuitar.prototype.setPrice = function (newPrice) {
+	this.price = newPrice;
+};
 
 function detectSound(sound) {
 	if (sound === "🎸") {
 		return "ElectricGuitar";
 	} else if (sound === "🔊") {
 		return "BassGuitar";
-	}
+	} else return "not Electric or Bass";
 }
-
-/* module.exports = {
-	ClassicGuitar: ClassicGuitar,
-	detectSound: detectSound,
-}; */
