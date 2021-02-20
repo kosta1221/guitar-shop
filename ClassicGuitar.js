@@ -35,3 +35,8 @@ function detectSound(sound) {
 		return "BassGuitar";
 	}
 }
+
+/* module.exports = {
+	ClassicGuitar: ClassicGuitar,
+	detectSound: detectSound,
+}; */
