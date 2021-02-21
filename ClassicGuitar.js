@@ -31,10 +31,10 @@ ClassicGuitar.prototype.setPrice = function (newPrice) {
 	this.price = newPrice;
 };
 
-function detectSound(sound) {
+ClassicGuitar.detectSound = (sound) => {
 	if (sound === "🎸") {
 		return "ElectricGuitar";
 	} else if (sound === "🔊") {
 		return "BassGuitar";
 	} else return "not Electric or Bass";
-}
+};

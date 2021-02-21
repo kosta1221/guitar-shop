@@ -19,9 +19,9 @@ BassGuitar.prototype.play = function () {
 BassGuitar.prototype.playSolo = function () {
 	const sounds = ["💥", "🤘", "🎵", "📢", "💢", "🕺"];
 	let string = "";
-	let random = Math.floor(Math.random() * 6);
+	let random = Math.floor(Math.random() * 20);
 	while (random === 0) {
-		random = Math.floor(Math.random() * 6);
+		random = Math.floor(Math.random() * 20);
 	}
 	for (let i = 0; i < random; i++) {
 		string += sounds[Math.floor(Math.random() * 6)];

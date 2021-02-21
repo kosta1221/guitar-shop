@@ -47,3 +47,7 @@ console.log("Bass solo: " + bg1.playSolo());
 console.log("Bass solo: " + bg1.playSolo());
 console.log("Bass solo: " + bg1.playSolo());
 console.log("Bass solo: " + bg1.playSolo());
+
+console.log(cg1.__proto__);
+console.log(Object.getPrototypeOf(bg1));
+console.log([]);
